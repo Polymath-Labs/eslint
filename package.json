@@ -1,0 +1,20 @@
+{
+  "name": "@polymath_labs/eslint-config",
+  "version": "1.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/polymathlabs/eslint/eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/eslint-config-nest",
+    "packages/eslint-config-node",
+    "packages/eslint-config-react",
+    "packages/eslint-config-typescript"
+  ],
+  "dependencies": {
+    "eslint": "^8.54.0"
+  }
+}
