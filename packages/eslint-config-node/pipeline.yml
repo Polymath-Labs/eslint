@@ -10,6 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
   demands: npm
 
+variables:
+- group: GLOBAL_SECRETS
+
 stages:
   - stage: Publish
     displayName: Publish library
@@ -20,3 +23,5 @@ stages:
           - script: |
               npm publish -w @polymath_labs/eslint-config-node
             displayName: "npm publish"
+            env:
+              NPM_ACCESS_TOKEN: $(NPM-AUTOMATION-ACCESS-TOKEN)
