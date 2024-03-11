@@ -1,8 +1,8 @@
 {
   "name": "@polymath_labs/eslint-plugin-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Polymath Labs ESLint custom React rules",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
