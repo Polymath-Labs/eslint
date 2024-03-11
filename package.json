@@ -15,6 +15,6 @@
     "packages/eslint-config-typescript"
   ],
   "dependencies": {
-    "eslint": "^8.54.0"
+    "eslint": "^8.57.0"
   }
 }

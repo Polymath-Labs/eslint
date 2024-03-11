@@ -1,14 +1,17 @@
 {
   "name": "@polymath_labs/eslint-config-node",
-  "version": "1.3.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Polymath Labs Node ESLint configuration",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "author": "https://github.com/Polymath-Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Polymath-Labs/eslint"
   },
-  "author": "Polymath Labs",
   "dependencies": {
-    "eslint-plugin-function-name": "^2.0.1"
+    "eslint-plugin-function-name": "^2.0.2"
   },
   "peerDependencies": {
     "eslint": ">= 8",
