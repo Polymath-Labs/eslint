@@ -21,7 +21,7 @@ stages:
         displayName: Publish
         steps:
           - script: |
-              npm publish -w @polymath_labs/eslint-config-react
+              npm publish -w @polymath_labs/eslint-config-react --access public
             displayName: "npm publish"
             env:
               NPM_ACCESS_TOKEN: $(NPM-AUTOMATION-ACCESS-TOKEN)
