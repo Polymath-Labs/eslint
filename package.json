@@ -12,7 +12,8 @@
     "packages/eslint-config-nest",
     "packages/eslint-config-node",
     "packages/eslint-config-react",
-    "packages/eslint-config-typescript"
+    "packages/eslint-config-typescript",
+    "packages/eslint-plugin-react"
   ],
   "dependencies": {
     "eslint": "^8.57.0"
