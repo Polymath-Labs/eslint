@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - packages/eslint-config-node/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+  demands: npm
+
+variables:
+- group: GLOBAL_SECRETS
+
+stages:
+  - stage: Publish
+    displayName: Publish library
+    jobs:
+      - job:
+        displayName: Publish
+        steps:
+          - script: |
+              npm publish -w @polymath_labs/eslint-config-node
+            displayName: "npm publish"
+            env:
+              NPM_ACCESS_TOKEN: $(NPM-AUTOMATION-ACCESS-TOKEN)

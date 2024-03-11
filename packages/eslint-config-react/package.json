@@ -1,0 +1,19 @@
+{
+  "name": "@polymath_labs/eslint-config-react",
+  "version": "1.0.0",
+  "description": "Polymath Labs ESLint configuration for React projects",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "https://github.com/Polymath-Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Polymath-Labs/eslint"
+  },
+  "peerDependencies": {
+    "@polymath_labs/eslint-config-node": ">= 1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}
