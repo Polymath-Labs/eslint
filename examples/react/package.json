@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@polymath_labs/eslint-config-react": "^1.1.0"
+    "@polymath_labs/eslint-config-react": "^1.1.1"
   }
 }
