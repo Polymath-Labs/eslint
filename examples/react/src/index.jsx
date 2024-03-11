@@ -1,7 +1,7 @@
 
 export class Component {
     render() {
-        return (<div>
+        return (<div style={{ color: 'red' }}>
 
         </div>);
     }
