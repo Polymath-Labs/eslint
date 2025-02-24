@@ -14,7 +14,7 @@
     "url": "https://github.com/Polymath-Labs/eslint"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^9.21.0",
     "jest": "^29.7.0"
   }
 }
