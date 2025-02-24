@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-node",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Polymath Labs Node ESLint configuration",
   "main": "index.js",
   "scripts": {},
@@ -11,13 +11,13 @@
     "url": "https://github.com/Polymath-Labs/eslint"
   },
   "dependencies": {
-    "eslint-plugin-function-name": "^2.0.2"
+    "eslint-plugin-function-name": "^2.0.3"
   },
   "peerDependencies": {
-    "eslint": ">= 8",
+    "eslint": ">=9",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.23.0"
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-sonarjs": "^3.0.2"
   }
 }

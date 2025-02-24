@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Polymath Labs ESLint configuration for TypeScript projects",
   "main": "index.js",
   "scripts": {},
@@ -11,12 +11,12 @@
     "url": "https://github.com/Polymath-Labs/eslint"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^7.2.0"
+    "@typescript-eslint/parser": "^8.25.0"
   },
   "peerDependencies": {
-    "@polymath_labs/eslint-config-node": ">= 1",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "eslint": ">= 8",
+    "@polymath_labs/eslint-config-node": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "eslint": ">=9",
     "typescript": "*"
   }
 }
