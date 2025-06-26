@@ -46,6 +46,7 @@ export default [
       '@typescript-eslint/no-empty-object-type': 'off',
 
       'sonarjs/function-return-type': 'off',
+      'sonarjs/no-unused-vars': 'off',
     }
 
   }
