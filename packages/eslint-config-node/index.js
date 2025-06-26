@@ -127,6 +127,7 @@ export default [
             'sonarjs/fixme-tag': 'off',
             'sonarjs/no-nested-template-literals': 'off',
             'sonarjs/no-small-switch': 'off',
+            'sonarjs/redundant-type-aliases': 'off',
             'sonarjs/todo-tag': 'off',
 
             // Unicorn
