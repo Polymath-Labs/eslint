@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-node",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Polymath Labs Node ESLint configuration",
   "main": "index.js",
   "type": "module",
