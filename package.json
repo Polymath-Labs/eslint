@@ -6,8 +6,8 @@
     "type": "git",
     "url": "git@ssh.dev.azure.com:v3/polymathlabs/eslint/eslint"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "https://github.com/Polymath-Labs",
+  "license": "MIT",
   "workspaces": [
     "packages/eslint-config-nest",
     "packages/eslint-config-node",
@@ -16,6 +16,6 @@
     "packages/eslint-plugin-react"
   ],
   "dependencies": {
-    "eslint": "^9.21.0"
+    "eslint": "^9.29.0"
   }
 }
