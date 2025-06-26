@@ -123,13 +123,15 @@ export default [
 
             // Sonar
             'sonarjs/no-async-constructor': 'off',
+            'sonarjs/deprecation': 'off',
+            'sonarjs/fixme-tag': 'off',
             'sonarjs/no-nested-template-literals': 'off',
             'sonarjs/no-small-switch': 'off',
             'sonarjs/todo-tag': 'off',
 
             // Unicorn
             'unicorn/filename-case': ['error', { 'case': 'kebabCase' }],
-            'unicorn/no-array-for-each': 'error',
+            // 'unicorn/no-array-for-each': 'error',
             'unicorn/no-unnecessary-await': 'error',
             'unicorn/number-literal-case': 'error',
             'unicorn/prefer-node-protocol': 'error',
