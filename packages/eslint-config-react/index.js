@@ -1,38 +1,41 @@
-module.exports = {
+import { FlatCompat } from '@eslint/eslintrc';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import polymathLabsTsConfig from '@polymath_labs/eslint-config-typescript';
+import path from 'path';
 
-    env: {
-        browser: true
-    },
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const compat = new FlatCompat({
+    baseDirectory: __dirname
+});
 
-    extends: [
-        "eslint:recommended",
-        "@polymath_labs/eslint-config-node",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-    ],
+const [polymathLabsReactPlugin] = compat.plugins('@polymath_labs/react');
 
-    plugins: [
-        "@polymath_labs/react",
-    ],
+export default [
+    polymathLabsTsConfig,
+    reactPlugin.configs.flat.recommended,
+    reactHooks.configs['recommended-latest'],
+    {
 
-    rules: {
-        "node/no-unsupported-features/node-builtins": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/display-name": "off",
-        "function-name/starts-with-verb": "off",
+        plugins: {
+            ...polymathLabsReactPlugin.plugins,
+        },
 
-        // It would be best to disable only for tsx/jsx, but for now, turn it off completely
-        // ... this is because function components become large by default
-        "sonarjs/cognitive-complexity": "off",
+        rules: {
+            'node/no-unsupported-features/node-builtins': 'off',
+            'react/react-in-jsx-scope': 'off',
+            'react/display-name': 'off',
+            'function-name/starts-with-verb': 'off',
 
-        // Custom rules
-        "@polymath_labs/react/no-inline-styles": "error",
-    },
+            // It would be best to disable only for tsx/jsx, but for now, turn it off completely
+            // ... this is because function components become large by default
+            'sonarjs/cognitive-complexity': 'off',
+            'sonarjs/no-nested-conditional': 'off',
+            'sonarjs/no-nested-functions': 'off',
 
-    settings: {
-        react: {
-            "version": "detect",
-        }
+            // Custom rules
+            '@polymath_labs/react/no-inline-styles': 'error',
+        },
+
     }
-
-};
+];
