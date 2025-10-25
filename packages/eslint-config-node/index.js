@@ -5,6 +5,7 @@ import path from 'path';
 import importPlugin from 'eslint-plugin-import';
 import perfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import stylistic from '@stylistic/eslint-plugin';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const compat = new FlatCompat({
@@ -26,6 +27,7 @@ export default [
 
         plugins: {
             ...compat.plugins('promise'),
+            '@stylistic': stylistic,
             import: importPlugin,
             unicorn: eslintPluginUnicorn,
         },
@@ -62,7 +64,7 @@ export default [
             'no-extend-native': 'warn',
             'no-extra-boolean-cast': 'off',
             'no-extra-label': 'warn',
-            'no-extra-parens': ['error', 'all', { 'conditionalAssign': false }],
+            'no-extra-parens': 'off', // Moved to @stylistic/eslint-plugin
             'no-fallthrough': 'off',
             'no-floating-decimal': 'error',
             'no-implicit-coercion': 'warn',
@@ -120,6 +122,9 @@ export default [
             'promise/no-nesting': 'warn',
             'promise/prefer-await-to-callbacks': 'error',
             'promise/prefer-await-to-then': 'error',
+
+            // Stylistic
+            '@stylistic/no-extra-parens': ['error', 'all', { 'conditionalAssign': false }],
 
             // Sonar
             'sonarjs/deprecation': 'off',

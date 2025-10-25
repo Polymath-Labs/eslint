@@ -18,10 +18,7 @@ export default [
     rules: {
       '@typescript-eslint/explicit-function-return-type': ['error'],
 
-      // note you must disable the base rule as it can report incorrect errors
-      // Use @stylistic/eslint-plugin instead
-      // 'no-extra-parens': 'off',
-      // '@typescript-eslint/no-extra-parens': ['error'],
+      '@stylistic/no-extra-parens': ['error', 'all', { 'conditionalAssign': false }],
 
       // note you must disable the base rule as it can report incorrect errors
       'no-magic-numbers': 'off',
