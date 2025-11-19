@@ -33,6 +33,17 @@ export default [
             'sonarjs/no-nested-conditional': 'off',
             'sonarjs/no-nested-functions': 'off',
 
+            // Fixes the pre-requisite for the useless bracket rule
+            "react/jsx-wrap-multilines": ["error", {
+                "arrow": "never",
+                "assignment": "never",
+                "condition": "never",
+                "declaration": "never",
+                "logical": "never",
+                "prop": "never",
+                "return": "never"
+            }],
+
             // Custom rules
             '@polymath_labs/react/no-inline-styles': 'error',
         },

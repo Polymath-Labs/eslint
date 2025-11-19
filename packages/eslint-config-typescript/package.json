@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-typescript",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Polymath Labs ESLint configuration for TypeScript projects",
   "main": "index.js",
   "type": "module",
@@ -15,7 +15,7 @@
     "url": "https://github.com/Polymath-Labs/eslint"
   },
   "dependencies": {
-    "@polymath_labs/eslint-config-node": "^2.2",
+    "@polymath_labs/eslint-config-node": "^2.3",
     "typescript-eslint": "^8.35.0"
   },
   "peerDependencies": {
