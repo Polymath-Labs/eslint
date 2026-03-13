@@ -1,13 +1,15 @@
 import tseslint from 'typescript-eslint';
 import polymathLabsNodeConfig from '@polymath_labs/eslint-config-node';
 
-export default [
+const tsFiles = ['**/*.{ts,tsx,cts,mts}'];
+
+export default tseslint.config(
   polymathLabsNodeConfig,
   {
-    name: 'polymath_labs/typescript/rules',
-    files: ['**/*.{ts,tsx,cts,mts}'],
+    name: 'polymath_labs/typescript/recommended',
+    files: tsFiles,
     extends: [
-      tseslint.configs.recommended,
+      ...tseslint.configs.recommended,
     ],
     languageOptions: {
       parserOptions: {
@@ -31,11 +33,6 @@ export default [
 
       '@typescript-eslint/restrict-plus-operands': 'error',
 
-      // note you must disable the base rule as it can report incorrect errors
-      // Use @stylistic/semi
-      // 'semi': 'off',
-      // '@typescript-eslint/semi': ['error'],
-
       '@typescript-eslint/no-explicit-any': 'off',
 
       'no-unused-vars': 'off',
@@ -47,4 +44,4 @@ export default [
     }
 
   }
-];
+);

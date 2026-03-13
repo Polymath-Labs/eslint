@@ -3,7 +3,11 @@ const RuleTester = eslint.RuleTester;
 const rule = require("../../src/rules/no-inline-styles");
 
 const ruleTester = new RuleTester({
-  parserOptions: { ecmaVersion: 2015, sourceType: "module", ecmaFeatures: { jsx: true } },
+  languageOptions: {
+    ecmaVersion: 2015,
+    sourceType: "module",
+    parserOptions: { ecmaFeatures: { jsx: true } },
+  },
 });
 
 ruleTester.run("no-inline-styles", rule, {
@@ -15,11 +19,11 @@ ruleTester.run("no-inline-styles", rule, {
   invalid: [
     {
       code: `<div style={{ color: 'red' }}></div>`,
-      errors: [{ message: "Inline styles are not allowed", type: "JSXAttribute" }],
+      errors: [{ message: "Inline styles are not allowed" }],
     },
     {
       code: `<Component style={{ backgroundColor: 'blue' }} />`,
-      errors: [{ message: "Inline styles are not allowed", type: "JSXAttribute" }]
+      errors: [{ message: "Inline styles are not allowed" }]
     }
   ]
 });

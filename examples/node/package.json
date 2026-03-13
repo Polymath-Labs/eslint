@@ -2,6 +2,7 @@
   "name": "node-example",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src"
@@ -10,11 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "@polymath_labs/eslint-config-node": "file:../../packages/eslint-config-node"
-  },
-  "devDependencies": {
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-sonarjs": "^0.11.0"
   }
 }

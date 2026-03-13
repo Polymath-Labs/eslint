@@ -1,7 +1,13 @@
 {
   "name": "@polymath_labs/eslint-config",
   "version": "1.0.0",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:plugin && npm run test:configs",
+    "test:plugin": "npm test -w packages/eslint-plugin-react",
+    "test:configs": "node --test tests/config-loading.test.js && node --test tests/integration.test.js",
+    "test:examples": "npm run lint -w examples/node; npm run lint -w examples/typescript; npm run lint -w examples/react; echo 'Example linting complete (errors above are expected from sample code)'"
+  },
   "repository": {
     "type": "git",
     "url": "git@ssh.dev.azure.com:v3/polymathlabs/eslint/eslint"
@@ -13,9 +19,23 @@
     "packages/eslint-config-node",
     "packages/eslint-config-react",
     "packages/eslint-config-typescript",
-    "packages/eslint-plugin-react"
+    "packages/eslint-plugin-react",
+    "examples/node",
+    "examples/react",
+    "examples/typescript"
   ],
   "dependencies": {
-    "eslint": "^9.29.0"
+    "eslint": "^10.0.3"
+  },
+  "overrides": {
+    "eslint-plugin-promise": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react-hooks": {
+      "eslint": "$eslint"
+    }
   }
 }

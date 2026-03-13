@@ -2,14 +2,15 @@
   "name": "react-example",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@polymath_labs/eslint-config-react": "^1.1.1"
+  "dependencies": {
+    "@polymath_labs/eslint-config-react": "file:../../packages/eslint-config-react"
   }
 }
