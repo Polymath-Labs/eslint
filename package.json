@@ -19,23 +19,9 @@
     "packages/eslint-config-node",
     "packages/eslint-config-react",
     "packages/eslint-config-typescript",
-    "packages/eslint-plugin-react",
-    "examples/node",
-    "examples/react",
-    "examples/typescript"
+    "packages/eslint-plugin-react"
   ],
   "dependencies": {
     "eslint": "^10.0.3"
-  },
-  "overrides": {
-    "eslint-plugin-promise": {
-      "eslint": "$eslint"
-    },
-    "eslint-plugin-react": {
-      "eslint": "$eslint"
-    },
-    "eslint-plugin-react-hooks": {
-      "eslint": "$eslint"
-    }
   }
 }

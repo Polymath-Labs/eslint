@@ -1,3 +1,4 @@
+import { fixupConfigRules } from '@eslint/compat';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import polymathLabsTsConfig from '@polymath_labs/eslint-config-typescript';
@@ -5,16 +6,18 @@ import polymathReactPlugin from '@polymath_labs/eslint-plugin-react';
 
 export default [
     ...polymathLabsTsConfig,
-    {
-        name: 'polymath_labs/react/setup',
-        files: ['**/*.{jsx,tsx}'],
-        ...reactPlugin.configs.flat.recommended,
-    },
-    {
-        name: 'polymath_labs/react/hooks',
-        files: ['**/*.{jsx,tsx}'],
-        ...reactHooks.configs.flat.recommended,
-    },
+    ...fixupConfigRules([
+        {
+            name: 'polymath_labs/react/setup',
+            files: ['**/*.{jsx,tsx}'],
+            ...reactPlugin.configs.flat.recommended,
+        },
+        {
+            name: 'polymath_labs/react/hooks',
+            files: ['**/*.{jsx,tsx}'],
+            ...reactHooks.configs.flat.recommended,
+        },
+    ]),
     {
         name: 'polymath_labs/react/rules',
         files: ['**/*.{jsx,tsx}'],
