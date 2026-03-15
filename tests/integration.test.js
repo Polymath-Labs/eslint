@@ -63,7 +63,7 @@ describe('React config integration', () => {
         const ruleIds = getRuleIds(result);
 
         assert.ok(ruleIds.includes('@polymath_labs/react/no-inline-styles'), 'Expected no-inline-styles to fire');
-        assert.ok(ruleIds.includes('react/jsx-wrap-multilines'), 'Expected react/jsx-wrap-multilines to fire');
+        assert.ok(ruleIds.includes('@stylistic/no-extra-parens'), 'Expected @stylistic/no-extra-parens to fire');
         assert.ok(ruleIds.includes('@stylistic/no-multiple-empty-lines'), 'Expected @stylistic/no-multiple-empty-lines to fire');
 
         const fatalErrors = result.messages.filter(m => m.fatal);

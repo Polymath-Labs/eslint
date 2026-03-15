@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-react",
-  "version": "3.0.0-rc1.0",
+  "version": "3.0.0-rc2",
   "description": "Polymath Labs ESLint configuration for React projects",
   "main": "index.js",
   "type": "module",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Polymath-Labs/eslint"
   },
   "dependencies": {
-    "@eslint/compat": "^2.0.3",
     "@polymath_labs/eslint-config-typescript": "^3.0.0-rc1",
     "@polymath_labs/eslint-plugin-react": "^2.2.0-rc1",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1"
+    "eslint-plugin-react-hooks": "7.1.0-canary-c80a0750-20260312",
+    "eslint-plugin-react-x": "^2.13.0"
   },
   "peerDependencies": {
     "eslint": ">=10"

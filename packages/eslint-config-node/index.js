@@ -3,8 +3,6 @@ import sonarjs from 'eslint-plugin-sonarjs';
 import perfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import stylistic from '@stylistic/eslint-plugin';
-import promisePlugin from 'eslint-plugin-promise';
-
 export const Rules = {
     // Base
     'array-callback-return': 'warn',
@@ -61,13 +59,6 @@ export const Rules = {
     // Perfectionist
     'perfectionist/sort-imports': 'error',
 
-    // Promise
-    'promise/always-return': 'error',
-    'promise/catch-or-return': 'error',
-    'promise/no-nesting': 'warn',
-    'promise/prefer-await-to-callbacks': 'error',
-    'promise/prefer-await-to-then': 'error',
-
     // Stylistic (includes rules migrated from deprecated ESLint core formatting rules)
     '@stylistic/array-bracket-spacing': 'error',
     '@stylistic/comma-dangle': ['error', 'only-multiline'],
@@ -109,7 +100,6 @@ export default [
     perfectionist.configs['recommended-alphabetical'],
     eslint.configs.recommended,
     sonarjs.configs.recommended,
-    promisePlugin.configs['flat/recommended'],
     {
         name: 'polymath_labs/node/rules',
 

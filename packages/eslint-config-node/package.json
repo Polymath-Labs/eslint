@@ -1,6 +1,6 @@
 {
   "name": "@polymath_labs/eslint-config-node",
-  "version": "3.0.0-rc1",
+  "version": "3.0.0-rc2",
   "description": "Polymath Labs Node ESLint configuration",
   "main": "index.js",
   "type": "module",
@@ -18,7 +18,6 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-perfectionist": "^5.6.0",
-    "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-sonarjs": "^4.0.2",
     "eslint-plugin-unicorn": "^63.0.0"
   },
