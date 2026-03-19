@@ -50,6 +50,9 @@ export default [
                 "return": "ignore"
             }],
 
+            // Escalate from warn (recommended) to error
+            'react-x/no-useless-fragment': 'error',
+
             // Custom rules
             '@polymath_labs/react/no-inline-styles': 'error',
         },
