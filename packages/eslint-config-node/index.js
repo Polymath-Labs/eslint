@@ -58,6 +58,7 @@ export const Rules = {
 
     // Perfectionist
     'perfectionist/sort-classes': ['error', {
+        useExperimentalDependencyDetection: false,
         groups: [
             'index-signature',
             // Static fields
