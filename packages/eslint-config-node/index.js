@@ -60,27 +60,32 @@ export const Rules = {
     'perfectionist/sort-classes': ['error', {
         groups: [
             'index-signature',
+            // Static fields
             ['static-property', 'static-accessor-property'],
+            ['protected-static-property', 'protected-static-accessor-property'],
+            ['private-static-property', 'private-static-accessor-property'],
             'static-block',
-            [
-                'property', 'protected-property', 'private-property',
-                'accessor-property', 'protected-accessor-property', 'private-accessor-property'
-            ],
+            // Instance fields, by visibility
+            ['property', 'accessor-property'],
+            ['protected-property', 'protected-accessor-property'],
+            ['private-property', 'private-accessor-property'],
             'constructor',
-            [
-                'get-method', 'set-method',
-                'protected-get-method', 'protected-set-method',
-                'private-get-method', 'private-set-method'
-            ],
-            [
-                'method', 'protected-method', 'private-method',
-                'function-property', 'protected-function-property', 'private-function-property'
-            ],
-            [
-                'static-method', 'protected-static-method', 'private-static-method',
-                'static-function-property', 'protected-static-function-property', 
-                'private-static-function-property'
-            ],
+            // Static accessors
+            ['static-get-method', 'static-set-method'],
+            ['protected-static-get-method', 'protected-static-set-method'],
+            ['private-static-get-method', 'private-static-set-method'],
+            // Instance accessors, by visibility
+            ['get-method', 'set-method'],
+            ['protected-get-method', 'protected-set-method'],
+            ['private-get-method', 'private-set-method'],
+            // Static methods
+            ['static-method', 'static-function-property'],
+            ['protected-static-method', 'protected-static-function-property'],
+            ['private-static-method', 'private-static-function-property'],
+            // Instance methods, by visibility
+            ['method', 'function-property'],
+            ['protected-method', 'protected-function-property'],
+            ['private-method', 'private-function-property'],
             'unknown',
         ],
     }],
