@@ -57,7 +57,7 @@ export const Rules = {
     'valid-typeof': 'error',
 
     // Perfectionist
-    'perfectionist/sort-imports': 'error',
+    'perfectionist/sort-imports': ['error', { newlinesBetween: 0 }],
 
     // Stylistic (includes rules migrated from deprecated ESLint core formatting rules)
     '@stylistic/array-bracket-spacing': 'error',
