@@ -57,6 +57,33 @@ export const Rules = {
     'valid-typeof': 'error',
 
     // Perfectionist
+    'perfectionist/sort-classes': ['error', {
+        groups: [
+            'index-signature',
+            ['static-property', 'static-accessor-property'],
+            'static-block',
+            [
+                'property', 'protected-property', 'private-property',
+                'accessor-property', 'protected-accessor-property', 'private-accessor-property'
+            ],
+            'constructor',
+            [
+                'get-method', 'set-method',
+                'protected-get-method', 'protected-set-method',
+                'private-get-method', 'private-set-method'
+            ],
+            [
+                'method', 'protected-method', 'private-method',
+                'function-property', 'protected-function-property', 'private-function-property'
+            ],
+            [
+                'static-method', 'protected-static-method', 'private-static-method',
+                'static-function-property', 'protected-static-function-property', 
+                'private-static-function-property'
+            ],
+            'unknown',
+        ],
+    }],
     'perfectionist/sort-imports': ['error', { newlinesBetween: 0 }],
 
     // Stylistic (includes rules migrated from deprecated ESLint core formatting rules)
